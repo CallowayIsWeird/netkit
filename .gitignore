@@ -1,0 +1,7 @@
+*.sbproj_c
+*_c
+*_d
+*_data/
+bin/
+obj/
+.vs/

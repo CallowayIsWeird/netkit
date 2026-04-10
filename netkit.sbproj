@@ -3,5 +3,14 @@
   "Type": "library",
   "Org": "local",
   "Ident": "netkit",
-  "Schema": 1
+  "Schema": 1,
+  "IncludeSourceFiles": false,
+  "Resources": null,
+  "PackageReferences": [],
+  "EditorReferences": null,
+  "IsWhitelistDisabled": false,
+  "Metadata": {
+    "Summary": "Networking primitives for s&box. Async request/response, typed event bus, cooldowns, client prediction, state machines, visibility rules.",
+    "CsProjName": ""
+  }
 }
