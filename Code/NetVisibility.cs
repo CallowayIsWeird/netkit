@@ -25,7 +25,7 @@ public sealed class NetVisibility : Component, Component.INetworkVisible
 	/// <summary>Custom filter delegate for Custom mode. Set from code.</summary>
 	public Func<Connection, bool> Filter { get; set; }
 
-	bool Component.INetworkVisible.ShouldNetworkTo( Connection connection )
+	bool Component.INetworkVisible.IsVisibleToConnection( Connection connection, in BBox bounds )
 	{
 		return Mode switch
 		{
