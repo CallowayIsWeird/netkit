@@ -33,7 +33,7 @@ public static class NetKitEditorMenu
 			"• NetTransaction — client prediction\n" +
 			"• NetState<T> — replicated state machines\n" +
 			"• NetVisibility — declarative visibility\n\n" +
-			"github.com/your-repo/netkit"
+			"github.com/CallowayIsWeird/netkit"
 		);
 	}
 }
