@@ -43,16 +43,17 @@ public sealed class NetRequest : GameObjectSystem<NetRequest>
 
 		RpcSendRequest( typeName, requestId, json );
 
-		var timeoutTask = GameTask.RunInThreadAsync( async () =>
+		// Poll for completion — Task.WhenAny is blocked by s&box's security whitelist.
+		var elapsed = 0f;
+		while ( !tcs.Task.IsCompleted && elapsed < TimeoutSeconds )
 		{
-			await Task.Delay( (int)( TimeoutSeconds * 1000 ) );
-			return (string)null;
-		} );
+			await GameTask.Delay( 50 );
+			elapsed += 0.05f;
+		}
 
-		var completed = await Task.WhenAny( tcs.Task, timeoutTask );
 		_pending.Remove( requestId );
 
-		if ( completed == tcs.Task && tcs.Task.Result != null )
+		if ( tcs.Task.IsCompleted && tcs.Task.Result != null )
 		{
 			try
 			{
