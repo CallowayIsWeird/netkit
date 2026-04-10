@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Editor": {
+      "commandName": "Executable",
+      "executablePath": "../../../../../../Programs/Steam/steamapps/common/sbox/sbox-dev.exe",
+      "commandLineArgs": "-project \u0022C:\\my stuff\\s\u0026box projects\\cscript\\libraries\\NetKit\\netkit.sbproj\u0022"
+    }
+  }
+}
