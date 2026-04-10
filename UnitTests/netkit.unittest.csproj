@@ -16,6 +16,7 @@
 		<DocumentationFile>../../../../../Programs/Steam/steamapps/common/sbox/.vs/output/NetKit.unittest.xml</DocumentationFile>
 		<RootNamespace>NetKit</RootNamespace>
 		<Nullable>disable</Nullable>
+		<DefaultItemExcludes>$(DefaultItemExcludes);**/editor/**;**/unittest/**</DefaultItemExcludes>
 		<IsTestProject>true</IsTestProject>
 	</PropertyGroup>
 
